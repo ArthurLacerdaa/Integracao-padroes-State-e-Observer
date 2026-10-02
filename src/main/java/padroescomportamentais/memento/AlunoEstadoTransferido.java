@@ -1,6 +1,5 @@
 package padroescomportamentais.memento;
 
-import padroescomportamentais.state.Aluno;
 
 public class AlunoEstadoTransferido implements AlunoEstado {
 
