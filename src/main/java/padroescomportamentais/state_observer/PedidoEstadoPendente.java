@@ -1,9 +1,12 @@
-package padroescomportamentais.state;
+package padroescomportamentais.state_observer;
 
 public class PedidoEstadoPendente extends PedidoEstado {
 
     private PedidoEstadoPendente() {};
-    private static PedidoEstadoPendente instance = new PedidoEstadoPendente();
+
+    private static PedidoEstadoPendente instance =
+            new PedidoEstadoPendente();
+
     public static PedidoEstadoPendente getInstance() {
         return instance;
     }
@@ -11,7 +14,6 @@ public class PedidoEstadoPendente extends PedidoEstado {
     public String getEstado() {
         return "Pendente";
     }
-
 
     public boolean pagar(Pedido pedido) {
         pedido.setEstado(PedidoEstadoPago.getInstance());

@@ -1,8 +1,15 @@
-package padroescomportamentais.state;
+package padroescomportamentais.state_observer;
 
-public abstract class PedidoEstado {
-    
+import java.util.Observable;
+
+public abstract class PedidoEstado extends Observable {
+
     public abstract String getEstado();
+
+    public void lancarEstado() {
+        setChanged();
+        notifyObservers();
+    }
 
     public boolean pagar(Pedido pedido) {
         return false;
@@ -20,8 +27,8 @@ public abstract class PedidoEstado {
         return false;
     }
 
-
-
-
-    
+    @Override
+    public String toString() {
+        return getEstado();
+    }
 }

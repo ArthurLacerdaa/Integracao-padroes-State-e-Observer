@@ -1,4 +1,4 @@
-package padroescomportamentais.state;
+package padroescomportamentais.state_observer;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -160,3 +160,4 @@ public class PedidoTest {
         assertEquals("Pendente", pedido.getNomeEstado());
     }
 }
+

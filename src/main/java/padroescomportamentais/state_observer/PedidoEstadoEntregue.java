@@ -1,4 +1,4 @@
-package padroescomportamentais.state;
+package padroescomportamentais.state_observer;
 
 public class PedidoEstadoEntregue extends PedidoEstado {
 
